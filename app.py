@@ -4,7 +4,7 @@ import numpy as np
 
 app = Flask(__name__, template_folder='template')
 
-model=pickle.load(open('/home/sanskargupta/Soumyadantre/trained_model/model.pkl','rb'))
+model=pickle.load(open('/home/sdantre/mysite/trained_model/model.pkl','rb'))
 
 
 @app.route('/')
