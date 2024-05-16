@@ -9,19 +9,27 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="./static/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
     <link href="./static/css2/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+     <style>
+    body {
+      background-image: url('https://images.pexels.com/photos/259915/pexels-photo-259915.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+    }
+  </style>
   </head>
 
   <body>
     <div class="section no-pad-bot" id="index-banner">
       <div class="container">
         <br><br>
-        <h1 class="header center orange-text">Mental Health Prediction</h1>
+        <h1 class="header center white-text" style="background-color: #808080; padding: 10px;">Mental Health Prediction</h1>
           <div class="row center">
-            <h5 class="header col s12 light">Predict the probability whether a person requires Mental Treatment
+            <h5 class="header col s12 light" style="background-color: #D3D3D3; padding: 10px; font-style: italic">Predict the probability whether a person requires Mental Health Treatment
               <br>
             </h5>
           </div>
-          <div class="row center">
+          <div class="row center" style="background-color: #f0f0f0; padding: 20px;">
             <h6 class="header col s12 light">Instructions to fill form</h6>
             <p class="col s12">
               1. Enter your age in years.<br>
@@ -36,18 +44,26 @@
           <form action='/predict' method="post" class="col s12">
             <div class="row">
               <div class="input-field col s4">
-                <label for="age"><b>Age</b></label>
+                <label for="age" style="background-color:#000000"><b>Age</b></label>
                 <br>
-                <input placeholder="Age" id="age" type="text" class="validate">
+                <select id="age" class="browser-default">
+                  <option value="">Select Age</option>
+                  <option value="0">13-19</option>
+                  <option value="1">20-29</option>
+                  <option value="2">30-39</option>
+                  <option value="2">40-49</option>
+                  <option value="2">50-59</option>
+                  <option value="2">60 and above</option>
+                </select>
               </div>
-              <div class="input-field col s4">
-                <label for="occupation"><b>Gender</b></label>
+              <div class="input-field col s4" >
+                <label for="Gender" style="background-color:#000000"><b>Gender</b></label>
                 <br>
-                <select id="occupation" name="Gender" class="browser-default">
+                <select id="Gender" name="Gender" class="browser-default">
                   <option value="">Select Gender</option>
                   <option value="0">Male</option>
                   <option value="1">Female</option>
-
+                  <option value="2">other</option>
                 </select>
               </div>
 
@@ -59,9 +75,9 @@
               <!--</div>-->
 
                <div class="input-field col s4">
-                <label for="occupation"><b>Family History</b></label>
+                <label for="Family_history" style="background-color:#000000"><b>Family- History</b></label>
                 <br>
-                <select id="occupation" name="Family_history" class="browser-default">
+                <select id="Family_history" name="Family_history" class="browser-default">
                   <option value="">Select Family History</option>
                   <option value="0">No</option>
                   <option value="1">Yes</option>
@@ -82,7 +98,7 @@
             <div class="row">
 
                 <div class="input-field col s4">
-                <label for="occupation"><b>Occupation</b></label>
+                <label for="occupation" style="background-color:#000000"><b>Occupation</b></label>
                 <br>
                 <select id="occupation" name="Occupation" class="browser-default">
                   <option value="">Select Occupation</option>
@@ -96,7 +112,7 @@
               </div>
 
               <div class="input-field col s4">
-                <label for="mental_health"><b>Mental Health History</b></label>
+                <label for="mental_health" style="background-color:#000000"><b>Mental Health History</b></label>
                 <br>
                 <select id="mental_health" name="Mental_health_History" class="browser-default">
                   <option value="">Select Option</option>
@@ -106,7 +122,7 @@
                 </select>
               </div>
               <div class="input-field col s4">
-                <label for="growing_stress"><b>Growing Stress</b></label>
+                <label for="growing_stress" style="background-color:#000000"><b>Growing Stress</b></label>
                 <br>
                 <select id="growing_stress" name="Growing_stress" class="browser-default">
                   <option value="">Select Option</option>
@@ -116,7 +132,7 @@
                 </select>
               </div>
               <div class="input-field col s4">
-                <label for="work_interest"><b>Work Interest</b></label>
+                <label for="work_interest" style="background-color:#000000"><b>Work Interest</b></label>
                 <br>
                 <select id="work_interest" name="Work_interest" class="browser-default">
                   <option value="">Select Option</option>
@@ -126,7 +142,7 @@
                 </select>
               </div>
               <div class="input-field col s4">
-                <label for="social_weakness"><b>Social Weakness</b></label>
+                <label for="social_weakness" style="background-color:#000000"><b>Social Weakness</b></label>
                 <br>
                 <select id="social_weakness" name="Social_weakness" class="browser-default">
                   <option value="">Select Option</option>
@@ -136,7 +152,7 @@
                 </select>
               </div>
               <div class="input-field col s4">
-                <label for="mood_swings"><b>Mood Swings</b></label>
+                <label for="mood_swings" style="background-color:#000000"><b>Mood Swings</b></label>
                 <br>
                 <select id="mood_swings" name="Mood_swings" class="browser-default">
                   <option value="">Select Option</option>
