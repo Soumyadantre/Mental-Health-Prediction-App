@@ -26,7 +26,11 @@ def predict():
         return render_template('result.html',pred='You need a treatment.\nProbability of mental illness is {}'.format(output))
     else:
         return render_template('result.html',pred='You do not need treatment.\n Probability of mental illness is {}'.format(output))
-
+@app.route('/next_page')
+def next_page():
+    # Add any necessary logic here before rendering the template
+    return render_template('next_page.html')
 
 if __name__ == '__main__':
     app.run(debug=True)
+
